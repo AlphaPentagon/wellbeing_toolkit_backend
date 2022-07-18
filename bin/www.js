@@ -15,7 +15,7 @@ const debug = debugLib("w9-backend-project-power-coders-fe:server");
  * Get port from environment and store in Express.
  */
 
-const port = normalizePort(process.env.PORT || "3000");
+const port = normalizePort(process.env.PORT || "3001");
 app.set("port", port);
 
 /**
@@ -28,7 +28,7 @@ const server = http.createServer(app);
  * Listen on provided port, on all network interfaces.
  */
 
-server.listen(port);
+server.listen(process.env.PORT || 3001);
 server.on("error", onError);
 server.on("listening", onListening);
 
